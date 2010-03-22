@@ -4,6 +4,7 @@ require 'sinatra'
 require 'net/http'
 require 'json'
 require 'uri'
+require 'pp'
 require 'ostruct'
 
 set :views => File.dirname(__FILE__) + '/views/'
@@ -13,7 +14,8 @@ get '/' do
   @individual_hudsons = [
     "192.168.53.214:8081", 
     "192.168.51.6:8080", 
-    "192.168.53.73:8081"
+    "192.168.53.73:8081",
+    "192.168.52.30:8888"
   ]
   
   @builds = []

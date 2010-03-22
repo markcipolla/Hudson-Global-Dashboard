@@ -25,14 +25,26 @@
             <dd class="lastStable noLastStable">No Stable Builds</dd>
             <% end %>  
             
+            <% if job.lastCompletedBuild %> 
             <dt>Last Complete</dt>
             <dd class="lastComplete"><a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a></dd>
+            <% end %> 
 
+            <% if job.description && job.description != "" %>
             <dt>Description</dt>
             <dd class="description"><%= job.description %></dd>
+            <% end %>
 
+            <% if job.healthReport && job.healthReport.length != 0 %>
             <dt>Health</dt>
-            <dd class="health"><%= job.healthReport[0]["description"] %> | Score of <%= job.healthReport[0]["score"] %></dd>
+              
+              <dd class="health">
+                <% job.healthReport.each do |health| %>
+                  <%= health["description"] %> | Score of <%= health["score"] %><br />
+                <% end %>
+              </dd>
+              
+            <% end %>
           </dl>
         </header>
         
