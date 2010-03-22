@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <title>Build Dashboard</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+  </head>
+<body>
+  <section id="buildStatuses">
+
+    <% @builds.each do |single_job| %>
+      <% job = OpenStruct.new single_job %>
+    
+      <article class="build">
+        
+        <header>
+          <div class="status <%= job.color %>"><h3><%= job.color %></h3></div>
+          <h2 class="title"><a href="<%= job.url %>"><%= job.displayName %></a></h2>
+          <dl>
+            <dt>Last Stable</dt>
+            <% if job.lastStableBuild %>            
+            <dd class="lastStable"><a href="<%= job.lastStableBuild["url"] %>"><%= job.lastStableBuild["number"].inspect %></a></dd>
+            <% else %>
+            <dd class="lastStable noLastStable">No Stable Builds</dd>
+            <% end %>  
+            
+            <dt>Last Complete</dt>
+            <dd class="lastComplete"><a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a></dd>
+
+            <dt>Description</dt>
+            <dd class="description"><%= job.description %></dd>
+
+            <dt>Health</dt>
+            <dd class="health"><%= job.healthReport[0]["description"] %> | Score of <%= job.healthReport[0]["score"] %></dd>
+          </dl>
+        </header>
+        
+        <footer>
+
+        </footer>
+        
+      </article>  
+    <% end %>
+  </section>
+</body>
+
+</html>

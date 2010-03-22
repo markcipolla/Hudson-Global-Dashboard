@@ -1,0 +1,139 @@
+body {  
+  padding: 50px 0 0 0;  
+  margin: 0;
+  font: 13px/22px Helvetica, Arial, sans-serif;  
+  background: url(background.png) repeat top left;  
+}  
+  
+/* Tell the browser to render HTML 5 elements as block */  
+section, header, footer, aside, nav, article {  
+  display: block;  
+}  
+  
+#buildStatuses {  
+  margin: 0 auto;  
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 2px 4px #000000;
+  background: transparent url(airport-board-background-bottom.png) repeat scroll left bottom;
+  border: 1px solid #353A3B;
+  color: #FFFFFF;
+  font-family:'Lucida Grande',Helvetica,Arial,sans-serif;
+  margin: 0 auto;
+  width: 700px;
+}
+
+article.build {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  clear: left;
+  padding: 15px 10px 10px 10px;
+}
+
+article.build:after,
+article.build header:after,
+article.build footer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+header {
+  padding-bottom: 10px;
+}
+
+h2.title {
+  background: url(airport-display-background-right.png) right top no-repeat;
+  display: block;
+  height: 38px;
+  margin: 0 10px;
+  padding: 0;
+  overflow: hidden;
+  width: 360px;
+  float: left;
+}
+
+h2.title a {
+  background: url(airport-display-background-left.png) left top no-repeat;
+  color: #fff;
+  text-decoration: none; 
+  display: block;
+  height: 30px;
+  margin: 0;
+  padding: 8px 0 0 10px; 
+}
+
+.status {
+  width: 90px;
+  height: 90px;
+  margin-left: 10px;
+  float: left;
+}
+
+.status h3 {
+  margin: 0;
+  padding: 0;
+  text-indent: -10000px;
+  height: 90px;
+  width: 90px;
+  display: block;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue_anime {
+  background-color: blue;
+}
+
+/* Blue in Japan means green. Obviously. Thanks Chef! */
+.blue {
+  background-color: green;
+}
+
+.status h3 {
+  background: url(status.png) no-repeat top left;
+}
+
+dl {
+  font-size: 10px;
+}
+
+a:link, a:visited, a:active {
+  color: #fff;
+  text-decoration: none;  
+}
+
+a:hover {
+  color: #777777;
+  text-decoration: underline;
+}
+
+dl dt {
+  color: #777777;
+  display: block;
+  font-weight: bold;
+  text-align: right;
+  text-shadow: 0 -1px 0 #000000;
+  text-transform: uppercase;
+  width: 90px;
+  float: left;
+  margin: 0;
+}
+
+dl dd {
+  color: #fff;
+  font-size: 10px;
+  text-shadow: 0 -1px 0 #000000;
+  float: left;
+  margin: 0;
+  padding-left: 20px;
+  width: 90px;
+}
+
+dl dd.description,
+dl dd.health {
+  width: 470px;
+}
