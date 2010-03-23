@@ -12,26 +12,13 @@ section, header, footer, aside, nav, article {
   
 #buildStatuses {  
   margin: 0 auto;  
-  -moz-border-radius: 5px;
-  -moz-box-shadow: 0 2px 4px #000000;
-  background: transparent url(airport-board-background-bottom.png) repeat scroll left bottom;
-  border: 1px solid #353A3B;
   color: #FFFFFF;
   font-family:'Lucida Grande',Helvetica,Arial,sans-serif;
   margin: 0 auto;
-  width: 700px;
+  width: 1114px;
 }
 
-article.build {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  clear: left;
-  padding: 15px 10px 10px 10px;
-}
-
-article.build:after,
-article.build header:after,
-article.build footer:after {
+#buildStatuses:after {
   content: ".";
   display: block;
   height: 0;
@@ -39,18 +26,45 @@ article.build footer:after {
   visibility: hidden;
 }
 
-header {
-  padding-bottom: 10px;
+.buildFailed a:link,
+.buildFailed a:visited,
+.buildFailed a:active,
+.buildFailed {
+  color: red;
+}
+
+article {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  float: left;
+  height: 90px;
+  padding: 10px 10px 10px 10px;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 2px 4px #000000;
+  background: transparent url(airport-board-background-bottom.png) repeat scroll left bottom;
+  border: 1px solid #353A3B;
+  margin-bottom: 20px;
+}
+
+article.build {
+  width: 480px;
+}
+
+article.buildStats {
+  width: 580px;
+  margin-left: 10px;
+  padding-top: 0;
+  height: 100px;
 }
 
 h2.title {
   background: url(airport-display-background-right.png) right top no-repeat;
   display: block;
   height: 38px;
-  margin: 0 10px;
+  margin: 0 0 0 10px;
   padding: 0;
   overflow: hidden;
-  width: 360px;
+  width: 380px;
   float: left;
 }
 
@@ -67,7 +81,6 @@ h2.title a {
 .status {
   width: 90px;
   height: 90px;
-  margin-left: 10px;
   float: left;
 }
 

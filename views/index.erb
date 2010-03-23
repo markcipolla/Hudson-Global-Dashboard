@@ -12,46 +12,40 @@
     <% @builds.each do |single_job| %>
       <% job = OpenStruct.new single_job %>
     
-      <article class="build">
-        
-        <header>
+      <article class="build">        
           <div class="status <%= job.color %>"><h3><%= job.color %></h3></div>
           <h2 class="title"><a href="<%= job.url %>"><%= job.displayName %></a></h2>
-          <dl>
-            <dt>Last Stable</dt>
-            <% if job.lastStableBuild %>            
-            <dd class="lastStable"><a href="<%= job.lastStableBuild["url"] %>"><%= job.lastStableBuild["number"].inspect %></a></dd>
-            <% else %>
-            <dd class="lastStable noLastStable">No Stable Builds</dd>
-            <% end %>  
+      </article>
+      
+      <article class="buildStats">        
+        <dl>
+          <% if job.description && job.description != "" %>
+          <dt>Description</dt>
+          <dd class="description"><%= job.description %></dd>
+          <% end %>
+          
+          <% if job.healthReport && job.healthReport.length != 0 %>
+          <dt>Health</dt>
             
-            <% if job.lastCompletedBuild %> 
-            <dt>Last Complete</dt>
-            <dd class="lastComplete"><a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a></dd>
-            <% end %> 
-
-            <% if job.description && job.description != "" %>
-            <dt>Description</dt>
-            <dd class="description"><%= job.description %></dd>
-            <% end %>
-
-            <% if job.healthReport && job.healthReport.length != 0 %>
-            <dt>Health</dt>
-              
-              <dd class="health">
-                <% job.healthReport.each do |health| %>
-                  <%= health["description"] %> | Score of <%= health["score"] %><br />
-                <% end %>
-              </dd>
-              
-            <% end %>
-          </dl>
-        </header>
-        
-        <footer>
-
-        </footer>
-        
+            <dd class="health">
+              <% job.healthReport.each do |health| %>
+                <%= health["description"] %> | Score of <%= health["score"] %><br />
+              <% end %>
+            </dd>
+          <% end %>
+          
+          <dt>Last Stable</dt>
+          <% if job.lastStableBuild %>            
+          <dd class="lastStable<%= ' buildFailed' if job.lastCompletedBuild["number"] != job.lastStableBuild["number"] %>"><a href="<%= job.lastStableBuild["url"] %>"><%= job.lastStableBuild["number"] %></a></dd>
+          <% else %>
+          <dd class="lastStable noLastStable buildFailed">No Stable Builds</dd>
+          <% end %>
+          
+          <% if job.lastCompletedBuild %> 
+          <dt>Last Complete</dt>
+          <dd class="lastComplete"><a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a></dd>
+          <% end %>
+        </dl>   
       </article>  
     <% end %>
   </section>
