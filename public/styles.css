@@ -97,7 +97,10 @@ h2.title a {
   background-color: red;
 }
 
-.blue_anime {
+/* Either when a test previously passed (blue) or failed (red),
+   the colour changes to show a test has begun */
+.blue_anime,
+.red_anime {
   background-color: blue;
 }
 
