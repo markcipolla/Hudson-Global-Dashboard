@@ -78,6 +78,15 @@ h2.title a {
   padding: 8px 0 0 10px; 
 }
 
+h3.blameGame {
+  display: block;
+  float: left;
+  font-size: 120%;
+  margin: 8px 0 0 20px;
+  overflow: hidden;
+  width: 370px;
+}
+
 .status {
   width: 90px;
   height: 90px;
