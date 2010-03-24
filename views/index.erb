@@ -7,9 +7,6 @@
   <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
   </head>
 <body>
-  <script type="text/javascript">
-    setTimeout('location.reload()', 30000);
-  </script>
 
   <% @builds.each do |single_job| %>
     <% job = OpenStruct.new single_job %>
@@ -71,6 +68,21 @@
       </section>  
     </article>  
   <% end %>
+  
+  <script type="text/javascript">
+    setTimeout('location.reload()', 30000);
+    (function heightSorter() {
+      windowH = $(window).height();
+      docH = $(document).height();
+      if ( docH == windowH ) {
+
+        numberOfBuilds = $('article').size();
+        newSize = (windowH / numberOfBuilds) - 20;
+        $('article').height(newSize);
+      }
+    })()
+    
+  </script>
 </body>
 
 </html>

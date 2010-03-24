@@ -18,9 +18,7 @@ article {
 section {
   padding: 0;
   position: relative;
-  border-top: 5px solid #fff;
-  border-left: 5px solid #fff;
-  border-right: 5px solid #fff;
+  height: 100%;
 }
 
 section:after,
@@ -63,6 +61,9 @@ ul {
   font-size: .8em;
   clear: both;
   background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 li {
