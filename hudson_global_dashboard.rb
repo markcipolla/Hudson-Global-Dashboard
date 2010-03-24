@@ -15,12 +15,13 @@ get '/' do
     "192.168.53.187:8081",
     "192.168.53.214:8081",
     "192.168.51.6:8080",
-    "192.168.52.30:8888"
+    "192.168.52.30:8888",
+    "ci.dev.int.realestate.com.au"
   ]
   
   @builds = []
   @individual_hudsons.each do |host|
-    host_results = JSON.parse(Net::HTTP.get(URI.parse("http://#{host}/api/json?depth=1")))
+    host_results = JSON.parse(Net::HTTP.get(URI.parse("http://#{URI.escape(host)}/api/json?depth=1")))
     host_results["jobs"].each do |job|
       job.merge!("hudson_host" => "#{host}")
     end
