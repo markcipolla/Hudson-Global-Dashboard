@@ -69,8 +69,8 @@
             <% require 'net/http'; require 'uri' %>
             <% res = Net::HTTP.get URI.parse("http://#{job.hudson_host}/job/#{job.name}/#{job.lastCompletedBuild["number"]}/changes") %>
             <% if res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) != nil %>
-              <li>Last commit by:</h4>
-                
+              <li>
+                <h4>Last commit by:</h4>
                 <span><%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></span>
               </li>
             <% end %>
