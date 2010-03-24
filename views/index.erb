@@ -16,7 +16,7 @@
         <% if job.color == "red" && job.lastSuccessfulBuild %>
           <% require 'net/http'; require 'uri' %>
           <% res = Net::HTTP.get URI.parse("http://#{job.hudson_host}/job/#{job.name}/#{job.lastSuccessfulBuild["number"] + 1}/changes") %>
-          <h3>The last commit was by <%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></h3>
+          <h3>The build may have been broken by <%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></h3>
         <% end %>
 
         <ul>
@@ -63,7 +63,18 @@
               <a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a>
               </span>
             </li>
+          <% end %>
+            
+          <% if job.color == "blue" %>
+            <% require 'net/http'; require 'uri' %>
+            <% res = Net::HTTP.get URI.parse("http://#{job.hudson_host}/job/#{job.name}/#{job.lastCompletedBuild["number"]}/changes") %>
+            <% if res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) != nil %>
+              <li>Last commit by:</h4>
+                
+                <span><%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></span>
+              </li>
             <% end %>
+          <% end %>
         </ul>
       </section>  
     </article>  
@@ -79,6 +90,7 @@
         numberOfBuilds = $('article').size();
         newSize = (windowH / numberOfBuilds) - 20;
         $('article').height(newSize);
+        $('ul').addClass("resizedList");
       }
     })()
     
