@@ -1,8 +1,8 @@
 body {  
-  padding: 50px 0 0 0;  
+  padding: 0;  
   margin: 0;
-  font: 13px/22px Helvetica, Arial, sans-serif;  
-  background: url(background.png) repeat top left;  
+  font: 11px Helvetica, Arial, sans-serif;
+  background: #333 url(background.png) repeat top left;  
 }  
   
 /* Tell the browser to render HTML 5 elements as block */  
@@ -10,15 +10,19 @@ section, header, footer, aside, nav, article {
   display: block;  
 }  
   
-#buildStatuses {  
-  margin: 0 auto;  
-  color: #FFFFFF;
-  font-family:'Lucida Grande',Helvetica,Arial,sans-serif;
-  margin: 0 auto;
-  width: 1114px;
+article {
+  width: 98%;
+  margin: 1%;
 }
 
-#buildStatuses:after {
+section {
+  padding: 10px 10px 0 0;
+  position: relative;
+  border: 5px solid #fff;
+}
+
+section:after,
+dl:after {
   content: ".";
   display: block;
   height: 0;
@@ -26,139 +30,90 @@ section, header, footer, aside, nav, article {
   visibility: hidden;
 }
 
-.buildFailed a:link,
-.buildFailed a:visited,
-.buildFailed a:active,
-.buildFailed {
-  color: red;
-}
 
-article {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  float: left;
-  height: 90px;
-  padding: 10px 10px 10px 10px;
-  -moz-border-radius: 5px;
-  -moz-box-shadow: 0 2px 4px #000000;
-  background: transparent url(airport-board-background-bottom.png) repeat scroll left bottom;
-  border: 1px solid #353A3B;
-  margin-bottom: 20px;
-}
-
-article.build {
-  width: 480px;
-}
-
-article.buildStats {
-  width: 580px;
-  margin-left: 10px;
-  padding-top: 0;
-  height: 100px;
-}
-
-h2.title {
-  background: url(airport-display-background-right.png) right top no-repeat;
-  display: block;
-  height: 38px;
-  margin: 0 0 0 10px;
-  padding: 0;
-  overflow: hidden;
-  width: 380px;
-  float: left;
-}
-
-h2.title a {
-  background: url(airport-display-background-left.png) left top no-repeat;
-  color: #fff;
+h2 a {
+  color: inherit;
+  font-size: 3.5em;
+  display: inline;
+  float: right;
+  padding: 10px;
   text-decoration: none; 
-  display: block;
-  height: 30px;
-  margin: 0;
-  padding: 8px 0 0 10px; 
 }
 
-h3.blameGame {
-  display: block;
-  float: left;
-  font-size: 120%;
-  margin: 8px 0 0 20px;
-  overflow: hidden;
-  width: 370px;
+h3 {
+  clear: both;
+  color: inherit;
+  font-size: 2.5em;
+  display: inline;
+  float: right;
+  padding: 10px;
+  text-decoration: none;
 }
 
-.status {
-  width: 90px;
-  height: 90px;
-  float: left;
+h2,
+h3,
+dl {
+	margin: 0;
+	font-family: MuseoSlab, Helvetica, “Helvetica Neue”, Arial, sans-serif;
+	font-weight: normal;
 }
 
-.status h3 {
+dl,
+dl dt,
+dl dd {
   margin: 0;
   padding: 0;
-  text-indent: -10000px;
-  height: 90px;
-  width: 90px;
-  display: block;
+  font-size: 1em;
+}
+
+dl {
+  width: 25%;
+  color: black;
+  position: relative;
+  bottom: -10px;
+  left: 0;
+}
+
+dl dt {
+  display: inline;
+  background: white;
+  margin-bottom: 4px;
+  padding: 2px 2px 2px 10px;
+}
+
+dl dd { 
+  background: white;
+  margin-bottom: 10px;
+  margin-left: 12%;
+  padding: 2px;
+}
+
+@font-face {
+	font-family: 'MuseoSlab';
+	src: url('Museo_Slab_500.eot');
+	src: local('MuseoSlab'), url('Museo_Slab_500.otf') format('opentype');
 }
 
 .red {
-  background-color: red;
+  background-color: #FF0012;
+  color: white;
 }
 
 /* Either when a test previously passed (blue) or failed (red),
    the colour changes to show a test has begun */
 .blue_anime,
 .red_anime {
-  background-color: blue;
+  background-color: #330CE8;
+  color: white;
 }
 
 /* Blue in Japan means green. Obviously. Thanks Chef! */
 .blue {
-  background-color: green;
+  background-color: #00FF27;
+  color: black;
 }
 
-.status h3 {
-  background: url(status.png) no-repeat top left;
-}
-
-dl {
-  font-size: 10px;
-}
-
-a:link, a:visited, a:active {
-  color: #fff;
-  text-decoration: none;  
-}
-
-a:hover {
-  color: #777777;
-  text-decoration: underline;
-}
-
-dl dt {
-  color: #777777;
-  display: block;
-  font-weight: bold;
-  text-align: right;
-  text-shadow: 0 -1px 0 #000000;
-  text-transform: uppercase;
-  width: 90px;
-  float: left;
-  margin: 0;
-}
-
-dl dd {
-  color: #fff;
-  font-size: 10px;
-  text-shadow: 0 -1px 0 #000000;
-  float: left;
-  margin: 0;
-  padding-left: 20px;
-  width: 90px;
-}
-
-dl dd.description,
-dl dd.health {
-  width: 470px;
+.disabled {
+  background-color: #333;
+  color: white;
 }

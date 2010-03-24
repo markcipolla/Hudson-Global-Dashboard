@@ -10,53 +10,50 @@
   <script type="text/javascript">
     setTimeout('location.reload()', 50000);
   </script>
-  <section id="buildStatuses">
 
-    <% @builds.each do |single_job| %>
-      <% job = OpenStruct.new single_job %>
-      <article class="build">        
-          <div class="status <%= job.color %>"><h3><%= job.color %></h3></div>
-          <h2 class="title"><a href="<%= job.url %>"><%= job.displayName %></a></h2>
-          <% if job.color == "red" && job.lastSuccessfulBuild %>
-            <% require 'net/http'; require 'uri' %>
-            <% res = Net::HTTP.get URI.parse("http://#{job.hudson_host}/job/#{job.name}/#{job.lastSuccessfulBuild["number"] + 1}/changes") %>
-            <h3 class="blameGame">Blame Game - <%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></h3>
-          <% end %>
-      </article>
-      
-      <article class="buildStats">        
+  <% @builds.each do |single_job| %>
+    <% job = OpenStruct.new single_job %>
+    <article class="build <%= job.color %>"> 
+      <section class="container">       
+        <h2><a href="<%= job.url %>"><%= job.displayName %></a></h2>
+        <% if job.color == "red" && job.lastSuccessfulBuild %>
+          <% require 'net/http'; require 'uri' %>
+          <% res = Net::HTTP.get URI.parse("http://#{job.hudson_host}/job/#{job.name}/#{job.lastSuccessfulBuild["number"] + 1}/changes") %>
+          <h3>The last commit was by <%= res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] %></h3>
+        <% end %>
+
         <dl>
           <% if job.description && job.description != "" %>
           <dt>Description</dt>
           <dd class="description"><%= job.description %></dd>
           <% end %>
-          
+        
           <% if job.healthReport && job.healthReport.length != 0 %>
           <dt>Health</dt>
-            
+          
             <dd class="health">
               <% job.healthReport.each do |health| %>
                 <%= health["description"] %> | Score of <%= health["score"] %><br />
               <% end %>
             </dd>
           <% end %>
-          
+        
           <dt>Last Stable</dt>
           <% if job.lastStableBuild %>            
           <dd class="lastStable<%= ' buildFailed' if job.lastCompletedBuild["number"] != job.lastStableBuild["number"] %>"><a href="<%= job.lastStableBuild["url"] %>"><%= job.lastStableBuild["number"] %></a></dd>
           <% else %>
           <dd class="lastStable noLastStable buildFailed">No Stable Builds</dd>
           <% end %>
-          
+        
           <% if job.lastCompletedBuild %> 
           <dt>Last Complete</dt>
           <dd class="lastComplete"><a href="<%= job.lastCompletedBuild["url"] %>"><%= job.lastCompletedBuild["number"] %></a></dd>
           <% end %>
-          
-        </dl>   
-      </article>  
-    <% end %>
-  </section>
+        
+        </dl>
+      </section>  
+    </article>  
+  <% end %>
 </body>
 
 </html>
