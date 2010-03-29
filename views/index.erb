@@ -64,6 +64,13 @@
               </span>
             </li>
           <% end %>
+          
+          <li>
+            <h4>Address</h4>
+            <span>
+              <%= job.hudson_host %>
+            </span>
+          </li>
             
           <% if job.color == "blue" %>
             <% require 'net/http'; require 'uri' %>
