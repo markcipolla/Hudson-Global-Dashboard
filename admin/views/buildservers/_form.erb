@@ -1,0 +1,15 @@
+<div class="group">
+  <%= f.label :address %><%= f.error_message_on :address %>
+  <%= f.text_field :address, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+<div class="group">
+  <%= f.label :description %><%= f.error_message_on :description %>
+  <%= f.text_area :description, :class => :text_area %>
+  <span class="description">Ex: a simple text</span>
+</div>
+
+<div class="group navform wat-cf">
+  <%= f.submit pat(:save), :class => :button %>
+  <%= f.submit pat(:cancel), :onclick => "window.location='#{url(:buildservers, :index)}';return false", :class => :button %>
+</div>

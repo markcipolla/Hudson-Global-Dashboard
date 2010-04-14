@@ -15,3 +15,13 @@ The Hudson Global Dashboard is an idea that stems from the Panic Board ( http://
 * Run the app via 'ruby hudson_global_dashboard.rb'
 * It runs on 'http://localhost:4567'
 * Enjoy 
+
+## Installation ##
+    
+    git clone git@github.com:markcipolla/Hudson-Global-Dashboard.git
+    bundle install
+    padrino rake seed
+    padrino start
+
+The "padrino rake seed" lets you set up the first admin account, so you can login.
+Point your browser to http://localhost:3000/admin so you can login. After adding at least one build, head to http://localhost:3000
