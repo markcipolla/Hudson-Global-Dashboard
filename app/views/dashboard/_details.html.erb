@@ -54,7 +54,7 @@
 
   <% if job['color'] == "blue" %>
     <% require 'net/http'; require 'uri' %>
-    <% res = Net::HTTP.get URI.parse("http://#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastCompletedBuild']["number"]}/changes") %>
+    <% res = Net::HTTP.get URI.parse("#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastCompletedBuild']["number"]}/changes") %>
     <% if res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) != nil %>
       <li>
         <h4>Last commit by:</h4>

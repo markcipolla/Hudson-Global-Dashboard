@@ -22,7 +22,11 @@ HudsonDashboard.controllers :dashboard do
     @builds_details = []
 
     Buildserver.all.each do |server|
-      server_data = JSON.parse(Net::HTTP.get(URI.parse("http://#{URI.escape(server.address)}/api/json?depth=1")))
+      request = Net::HTTP.get(URI.parse("#{URI.escape(server.address)}/api/json?depth=1"));
+      if request != ""
+        server_data = JSON.parse(request)
+      end
+      
       server_data["jobs"].each do |job|
         job.merge!("hudson_host" => "#{server.address}")
       end
