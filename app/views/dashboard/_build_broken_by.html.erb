@@ -1,0 +1,3 @@
+<% if job['build_broken_by'] and job['build_broken_by'] != '' %>
+  <h3>The build may have been broken by <%= job['build_broken_by'] %></h3>
+<% end %>

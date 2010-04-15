@@ -1,0 +1,15 @@
+<% if job['lastStableBuild'] %>
+  <li<%= ' class=" buildFailed"' if job['lastCompletedBuild']["number"] != job['lastStableBuild']["number"] %>>
+    <h4>Last Stable</h4>
+    <span>
+      <a href="<%= job['lastStableBuild']["url"] %>"><%= job['lastStableBuild']["number"] %></a>
+    </span>
+  </li>
+<% else %>
+  <li class="buildFailed">
+    <h4>Last Stable</h4>
+    <span>
+      No Stable Builds
+    </span>
+  </li>
+<% end %>

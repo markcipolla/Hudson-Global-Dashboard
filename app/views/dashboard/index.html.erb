@@ -13,16 +13,15 @@
       <article class="build <%= job['color'] %>"> 
         <section class="container">       
           <h2><a href="<%= job['url'] %>"><%= job['displayName'] %></a></h2>
-          <% if job['color'] == "red" && job['lastSuccessfulBuild'] %>
-            <% require 'net/http'; require 'uri' %>
-            <% res = Net::HTTP.get URI.parse("#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastSuccessfulBuild']["number"] + 1}/changes") %>
-            <% build_broken_by = res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) || nil %>
-            <% if build_broken_by && build_broken_by != '' %>
-             <h3>The build may have been broken by <%= build_broken_by[1] %></h3>
-            <% end %>
-          <% end %>
-          
-          <%= partial 'dashboard/details', :locals => {:job => job } %>
+          <%= partial 'dashboard/build_broken_by', :locals => {:job => job } %>
+          <ul>
+            <%= partial 'dashboard/description', :locals => {:job => job } %>
+            <%= partial 'dashboard/health_report', :locals => {:job => job } %>
+            <%= partial 'dashboard/last_stable_build', :locals => {:job => job } %>
+            <%= partial 'dashboard/last_completed_build', :locals => {:job => job } %>
+            <%= partial 'dashboard/address', :locals => {:job => job } %>
+            <%= partial 'dashboard/last_commit_by', :locals => {:job => job } %>
+          </ul>
         </section>
       </article>
     <% end %>
@@ -40,7 +39,7 @@
       if ( docH == windowH ) {
 
         numberOfBuilds = $('article').size();
-        newSize = (windowH / numberOfBuilds) - 18;
+        newSize = (windowH / numberOfBuilds) - 20;
         $('article').height(newSize);
         $('ul').addClass("resizedList");
       }
