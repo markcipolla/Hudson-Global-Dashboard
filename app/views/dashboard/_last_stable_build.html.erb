@@ -1,4 +1,4 @@
-<% if job['lastStableBuild'] %>
+<% if job['lastStableBuild'] && job['lastCompletedBuild'] %>
   <li<%= ' class=" buildFailed"' if job['lastCompletedBuild']["number"] != job['lastStableBuild']["number"] %>>
     <h4>Last Stable</h4>
     <span>

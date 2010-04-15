@@ -41,6 +41,14 @@ HudsonDashboard.controllers :dashboard do
             end
           end
 
+          if job['color'] == "blue"
+            res = Net::HTTP.get URI.parse("#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastCompletedBuild']["number"]}/changes")
+            last_commit_by_username = res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) || ""
+            if last_commit_by_username && last_commit_by_username != ""
+              job.merge!("last_commit_by" => "#{last_commit_by_username}" )
+            end
+          end
+
         end
         @builds_details << server_data["jobs"]
       end
