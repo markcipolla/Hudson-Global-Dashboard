@@ -4,7 +4,7 @@ require 'net/http'
 # HTTP Codes: http://www.ruby-doc.org/stdlib/libdoc/net/http/rdoc/classes/Net/HTTPResponse.html
 
 class ActiveRecord::Base
-  def self.validates_uri_existence_of(*attr_names)
+  def self.validates_hudson_uri_existence_of(*attr_names)
     configuration = { :message => "is not valid or not responding", :on => :save, :with => nil }
     configuration_not_json = { :message => "is not a valid Hudson machine", :on => :save, :with => nil }
     configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)

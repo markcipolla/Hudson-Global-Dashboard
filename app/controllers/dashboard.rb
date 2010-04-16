@@ -36,6 +36,7 @@ HudsonDashboard.controllers :dashboard do
           if job['lastSuccessfulBuild'] && job['color'] == 'red'
             res = Net::HTTP.get(URI.parse("#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastSuccessfulBuild']["number"] + 1}/changes"))
             build_broken_by_username = res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) || ""
+            puts build_broken_by_username
             if build_broken_by_username && build_broken_by_username != ""
               job.merge!("build_broken_by" => "#{build_broken_by_username}" )
             end
@@ -43,7 +44,8 @@ HudsonDashboard.controllers :dashboard do
 
           if job['color'] == "blue"
             res = Net::HTTP.get URI.parse("#{job['hudson_host']}/job/#{URI.escape(job['name'])}/#{job['lastCompletedBuild']["number"]}/changes")
-            last_commit_by_username = res.to_s.match(/by \<a href="\/user\/([^\/]*)\//) || ""
+            last_commit_by_username = res.to_s.match(/by \<a href="\/user\/([^\/]*)\//)[1] || ""
+            puts last_commit_by_username
             if last_commit_by_username && last_commit_by_username != ""
               job.merge!("last_commit_by" => "#{last_commit_by_username}" )
             end
