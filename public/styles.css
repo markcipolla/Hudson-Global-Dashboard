@@ -137,6 +137,7 @@ h3 {
 /* Either when a test previously passed (blue) or failed (red),
    the colour changes to show a test has begun */
 .blue_anime,
+.aborted_anime,
 .red_anime {
   background-color: #330CE8;
   color: white;
