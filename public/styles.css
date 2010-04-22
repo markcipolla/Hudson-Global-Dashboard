@@ -129,6 +129,7 @@ h3 {
 	src: local('MuseoSlab'), url('Museo_Slab_500.otf') format('opentype');
 }
 
+.aborted,
 .red {
   background-color: #FF0012;
   color: white;
