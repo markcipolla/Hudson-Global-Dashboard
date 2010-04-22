@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Build Dashboard</title>
   <link rel="stylesheet" href="styles.css" type="text/css" />
-  <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
   </head>
 <body>
 
@@ -26,26 +26,12 @@
       </article>
     <% end %>
   <% end %>
-  
+
   <nav>
     <h1><a href="/admin/" title="Administration">Hudson Global Dashboard Admin</a></h1>
   </nav>
   
-  <script type="text/javascript">
-    setTimeout('location.reload()', 30000);
-    (function heightSorter() {
-      windowH = $(window).height();
-      docH = $(document).height();
-      if ( docH == windowH ) {
-
-        numberOfBuilds = $('article').size();
-        newSize = (windowH / numberOfBuilds) - 20;
-        $('article').height(newSize);
-        $('ul').addClass("resizedList");
-      }
-    })()
-    
-  </script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
 </body>
 
 </html>
