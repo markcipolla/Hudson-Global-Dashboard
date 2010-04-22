@@ -11,11 +11,55 @@
   }
 })()
 
-function colourPulser() {
-  $('.blue_anime').animate({opacity: 0.4}, 400 ).animate({opacity: 1}, 370 );
-  $('.aborted_anime').animate({opacity: 0.4}, 400 ).animate({opacity: 1}, 370 );
-  $('.red_anime').animate({opacity: 0.4}, 400 ).animate({opacity: 1}, 370 );
-}
+$('.blue_anime').animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 );
 
-setTimeout('colourPulser()', 1000);
+$('.aborted_anime').animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, ç ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 );
+
+$('.red_anime').animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity:
+1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000
+).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({
+opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
+).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({ opacity: 0.4 }, 1000 ).animate({
+opacity: 1 }, 1000 );
+
 setTimeout('location.reload()', 30000);
