@@ -21,9 +21,6 @@ article.blue section.details         { background-color: #638A2C }
 article.blue section.description     { background-color: #516628 }
 
 /* Testing Builds */
-.blue_anime,
-.aborted_anime,
-.red_anime {
 article.blue_anime header,
 article.aborted_anime header,
 article.red_anime header                  { background-color: #365FB7 }
