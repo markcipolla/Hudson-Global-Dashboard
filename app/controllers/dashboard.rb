@@ -59,7 +59,26 @@ HudsonDashboard.controllers :dashboard do
         @builds_details << server_data["jobs"]
       end
     end
-
+    
+    #Tramtracker
+    
+    uri = URI.parse("http://mobile.itransit.com.au/ttlookup")
+    
+    # to City
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Post.new(uri.request_uri)
+    request.set_form_data({"ttid" => "1725"})
+    response = http.request(request)
+    @tramtracker_to_city = response
+    puts @tramtracker_to_city.body
+    
+    # from City
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Post.new(uri.request_uri)
+    request.set_form_data({"ttid" => "1725"})
+    response = http.request(request)
+    @tramtracker_from_city = response
+    puts @tramtracker_from_city.body
     render 'dashboard/index'
   end
 

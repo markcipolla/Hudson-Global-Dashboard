@@ -31,8 +31,17 @@
         </article>
       <% end %>
     <% end %>
-  </section>
-  
+    <article class="tramtracker">
+      <section class="to_city">
+        <h2>To City</h2>
+        <%= @tramtracker_to_city.body %>
+      </section>
+      <section class="to_city">
+        <h2>From City</h2>
+        <%= @tramtracker_from_city.body %>
+      </section>
+    </section>
+  </article>
   <nav>
     <h1><a href="/admin/" title="Administration">Hudson Global Dashboard Admin</a></h1>
   </nav>
