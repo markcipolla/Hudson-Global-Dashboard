@@ -54,7 +54,7 @@ HudsonDashboard.controllers :dashboard do
               end
             end
           end
-
+          
         end
         @builds_details << server_data["jobs"]
       end

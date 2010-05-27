@@ -1,8 +1,6 @@
 <% if job['description'] && job['description'] != "" %>
-  <li>
-    <h4>Description</h4>
-    <span>
-    <%= job['description'] %>
-    </span>
-  </li>
+<section class="description">
+  <h2>Description</h2>
+  <p><%= job['description'] %></p>
+</section>
 <% end %>

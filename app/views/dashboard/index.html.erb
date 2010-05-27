@@ -3,35 +3,39 @@
   <head>
   <meta charset="utf-8" />
   <title>Build Dashboard</title>
-  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/layout.css" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/colours.css" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/nav.css" type="text/css" />
   <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.masonry.min.js"></script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
   </head>
 <body>
-
-  <% @builds_details.each do |server| %>
-    <% server.each do |job| %>
-      <article class="build <%= job['color'] %>"> 
-        <section class="container">       
-          <h2><a href="<%= job['url'] %>"><%= job['displayName'] %></a></h2>
-          <%= partial 'dashboard/build_broken_by', :locals => {:job => job } %>
-          <ul>
-            <%= partial 'dashboard/description', :locals => {:job => job } %>
-            <%= partial 'dashboard/health_report', :locals => {:job => job } %>
-            <%= partial 'dashboard/last_stable_build', :locals => {:job => job } %>
-            <%= partial 'dashboard/last_completed_build', :locals => {:job => job } %>
-            <%= partial 'dashboard/address', :locals => {:job => job } %>
-            <%= partial 'dashboard/last_commit_by', :locals => {:job => job } %>
-          </ul>
-        </section>
-      </article>
+  <section id="content">
+    <% @builds_details.each do |server| %>
+      <% server.each do |job| %>
+        <% if job['healthReport'] && job['healthReport'].length != 0 %>
+          <% job['healthReport'].each do |health| %>
+            <% @build_score =  health['score'] %>
+          <% end %>
+        <% end %>
+      
+        <article class="<%= job['color'] %> build<%= @build_score %>">
+          <header>
+            <h1><a href="<%= job['url'] %>"><%= job['displayName'] %></a></h1>
+          </header>
+          <%= partial 'dashboard/committer_details', :locals => {:job => job } %>
+          <%= partial 'dashboard/build_stats', :locals => {:job => job } %>
+          <%= partial 'dashboard/details', :locals => {:job => job } %>
+          <%= partial 'dashboard/description', :locals => {:job => job } %>
+        </article>
+      <% end %>
     <% end %>
-  <% end %>
-
+  </section>
+  
   <nav>
     <h1><a href="/admin/" title="Administration">Hudson Global Dashboard Admin</a></h1>
   </nav>
-  
-  <script type="text/javascript" src="javascripts/application.js"></script>
 </body>
 
 </html>
