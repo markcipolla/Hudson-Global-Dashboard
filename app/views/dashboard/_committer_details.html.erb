@@ -1,0 +1,11 @@
+<% if (job['build_broken_by'] and job['build_broken_by'] != '') or (job['last_commit_by'] and job['last_commit_by'] != '') %>
+  <section>
+    <% if job['build_broken_by'] and job['build_broken_by'] != '' %>
+      <h2>The build may have been broken by <%= job['build_broken_by'] %></h2>
+    <% end %>
+    <% if job['last_commit_by'] and job['last_commit_by'] != '' %>
+      <h2>Last commit by:</h2>
+      <p><%= job['last_commit_by'] %></p>
+    <% end %>
+  </section>
+<% end %>

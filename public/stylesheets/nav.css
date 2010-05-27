@@ -1,0 +1,40 @@
+/* Hudson Global Dashboard - created by Mark Cipolla */
+
+/* Nav
+--------------------------------------------------------------------- */
+nav {
+  position: absolute;
+  right: -110px;
+  top: 140px;
+  background-color: white;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-radius-topleft: 10px;
+  -webkit-border-radius-topright: 10px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  
+  font-family: MuseoSlab, Helvetica, “Helvetica Neue”, Arial, sans-serif;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav a {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: normal;
+  display: block;
+}
+
+nav a:link,
+nav a:visited,
+nav a:active {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

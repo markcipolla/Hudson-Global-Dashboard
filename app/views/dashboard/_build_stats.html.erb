@@ -1,0 +1,27 @@
+<section class="buildStats clearfix">
+  <% if job['healthReport'] && job['healthReport'].length != 0 %>
+    <section class="healthScore">
+      <h2>Health</h2>
+      <% job['healthReport'].each do |health| %>
+        <p><%= health['score'] %>%</p>
+      <% end %>
+    </section>
+  <% end %>
+  <% if job['lastStableBuild'] && job['lastCompletedBuild'] %>
+    <section class="numberOfBuilds<%= ' buildFailed' if job['lastCompletedBuild']["number"] != job['lastStableBuild']["number"] %>">
+      <h2>Number of Builds</h2>
+      <p><a href="<%= job['lastStableBuild']["url"] %>"><%= job['lastStableBuild']["number"] %></a></p>
+    </section>
+  <% end %>
+  <% if job['lastStableBuild'] && job['lastCompletedBuild'] %>
+  <section class="lastStableBuild">
+    <h2>Last Stable Build</h2>
+    <p><a href="<%= job['lastCompletedBuild']["url"] %>"><%= job['lastCompletedBuild']["number"] %></a></p>
+  </section>
+  <% else %>
+  <section class="buildFailed">
+    <h4>Last Stable Build Number</h4>
+    <p>No Stable Builds</p>
+  </section>
+  <% end %>
+</section>

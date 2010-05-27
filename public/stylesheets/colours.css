@@ -1,0 +1,29 @@
+/* Hudson Global Dashboard - created by Mark Cipolla */
+
+/* Colours
+--------------------------------------------------------------------- */
+
+/* Failing Builds */
+article.red header                   { background-color: #E82C0C }
+article.red section.buildStats       { background-color: #C81300 }
+article.red section.details          { background-color: #9F0000 }
+article.red section.description      { background-color: #750000 }
+
+/* Passing Builds */
+/* Blue in Japan means green. Obviously. Thanks Chef! */
+article.blue header                  { background-color: #59CC0D }
+article.blue section.buildStats      { background-color: #65A825 }
+article.blue section.details         { background-color: #638A2C }
+article.blue section.description     { background-color: #516628 }
+
+/* Testing Builds */
+article.blue header                  { background-color: #59CC0D }
+article.blue section.buildStats      { background-color: #65A825 }
+article.blue section.details         { background-color: #638A2C }
+article.blue section.description     { background-color: #516628 }
+
+/* Disabled Builds */
+article.disabled header              { background-color: #59CC0D }
+article.disabled section.buildStats  { background-color: #65A825 }
+article.disabled section.details     { background-color: #638A2C }
+article.disabled section.description { background-color: #516628 }

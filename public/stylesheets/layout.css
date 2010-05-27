@@ -1,0 +1,189 @@
+/* Hudson Global Dashboard - created by Mark Cipolla */
+
+/* Layout
+--------------------------------------------------------------------- */
+body {  
+  padding: 10px;  
+  margin: 0;
+  font: bold 1em Helvetica, Arial, sans-serif;
+  background-color: #F2D8A7;  
+}  
+  
+/* Tell the browser to render HTML 5 elements as block */  
+section, header, footer, aside, nav, article, figure {  
+  display: block;  
+}
+
+/* Builds
+--------------------------------------------------------------------- */
+article {
+  float: left;
+  margin-bottom: 10px;
+}
+
+article.build100 { width: 300px; font-size: 0.75em;} /* Passed, more than the last five builds */
+article.build80  { width: 610px; font-size: 0.88em;} /* Passed, less than the last five builds */
+article.build60  { width: 610px; font-size: 0.88em;} /* Failed, less than the last five builds */
+article.build40  { width: 610px; font-size: 0.88em;} /* Failed, more than the last five builds */
+article.build20  { width: 610px; font-size: 0.88em;} /* Failed, more than the last five builds */
+article.build0   { width: 920px; } /* Failed, more than the last five builds */
+
+/* Typography
+--------------------------------------------------------------------- */
+h1, h2, h3 h4, h5, h6, p {
+  margin: 0;
+  color: white;
+}
+
+article section h2 {
+  margin-bottom: 10px;
+}
+
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text_decoration: underline;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Header
+--------------------------------------------------------------------- */
+article header {
+  padding: 10px 10px 5px 10px;
+}
+
+article.build0 header {
+  padding: 20px 10px 10px 10px;
+}
+
+article.build0 header h1 {
+  font-size: 3.13em;
+}
+
+article.build20 header h1,
+article.build40 header h1,
+article.build60 header h1,
+article.build80 header h1 {
+  font-size: 2.13em;
+}
+
+/* Build Stats
+--------------------------------------------------------------------- */
+article section.buildStats {
+  padding: 10px 10px 0px 10px;
+}
+
+article.build0 section.buildStats section {
+  float: left;
+  width: 33%;
+}
+
+article.build0 section.buildStats section p {
+  font-size: 4.13em;
+}
+
+article.build20 section.buildStats section,
+article.build40 section.buildStats section,
+article.build60 section.buildStats section,
+article.build80 section.buildStats section {
+  float: left;
+  width: 33%;
+}
+
+article.build20 section.buildStats section h2,
+article.build40 section.buildStats section h2,
+article.build60 section.buildStats section h2,
+article.build80 section.buildStats section h2 {  
+  font-size: 1.14em;
+}
+
+article.build20 section.buildStats section p,
+article.build40 section.buildStats section p,
+article.build60 section.buildStats section p,
+article.build80 section.buildStats section p {  
+  font-size: 2.13em;
+}
+
+article.build100 section.buildStats section h2 {
+  float: left;
+  clear: both;
+  width: 80%;
+}
+
+article.build100 section.buildStats section p {
+  float: right;
+  width: 20%;
+  font-size: 1.83em;
+}
+
+/* Details
+--------------------------------------------------------------------- */
+article section.details {
+  padding: 10px 10px 0 10px;
+}
+
+article.build0 section.details section {
+  float: left;
+  width: 50%;
+}
+
+article.build0 section.details section p {
+  font-size: 1.13em;
+  padding-bottom: 10px;
+}
+
+article.build20 section.details section,
+article.build40 section.details section,
+article.build60 section.details section,
+article.build80 section.details section {
+  float: left;
+  width: 50%;
+}
+
+article.build20 section.details section h2,
+article.build40 section.details section h2,
+article.build60 section.details section h2,
+article.build80 section.details section h2 {  
+  font-size: 1.14em;
+}
+
+article.build20 section.details section p,
+article.build40 section.details section p,
+article.build60 section.details section p,
+article.build80 section.details section p {  
+  padding-bottom: 10px;
+}
+
+article.build100 section.details section h2 {
+}
+
+article.build100 section.details section p {
+  font-size: 1.14em;
+  padding-bottom: 10px;
+}
+
+
+/* Description
+--------------------------------------------------------------------- */
+article section.description {
+  padding: 10px;
+}
+
+article.build20 section.description h2,
+article.build40 section.description h2,
+article.build60 section.description h2,
+article.build80 section.description h2 {  
+  font-size: 1.14em;
+}

@@ -1,0 +1,14 @@
+<section class="details clearfix">
+  <section class="address">
+    <h2>Address</h2>
+    <p><a href="<%= job['hudson_host'] %>"><%= job['hudson_host'] %></a></p>
+  </section>
+  <% if job['healthReport'] && job['healthReport'].length != 0 %>
+  <section class="stability">
+    <h2>Stability</h2>
+    <% job['healthReport'].each do |health| %>
+    <p><%= health['description'].gsub('Build stability: ', '') %></p>
+    <% end %>
+  </section>
+  <% end %>
+</section>
