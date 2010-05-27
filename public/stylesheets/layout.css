@@ -221,6 +221,7 @@ article.build100 section.description p {
 article.tramtracker {
   padding: 10px;
   background-color: white;
+  width: 230px;
 }
 
 article.tramtracker section h2 {
