@@ -4,9 +4,13 @@
 --------------------------------------------------------------------- */
 
 /* Failing Builds */
+article.aborted header,
 article.red header                   { background-color: #E82C0C }
+article.aborted section.buildStats,
 article.red section.buildStats       { background-color: #C81300 }
+article.aborted section.details,
 article.red section.details          { background-color: #9F0000 }
+article.aborted section.description,
 article.red section.description      { background-color: #750000 }
 
 /* Passing Builds */
@@ -17,13 +21,24 @@ article.blue section.details         { background-color: #638A2C }
 article.blue section.description     { background-color: #516628 }
 
 /* Testing Builds */
-article.blue header                  { background-color: #59CC0D }
-article.blue section.buildStats      { background-color: #65A825 }
-article.blue section.details         { background-color: #638A2C }
-article.blue section.description     { background-color: #516628 }
+.blue_anime,
+.aborted_anime,
+.red_anime {
+article.blue_anime header,
+article.aborted_anime header,
+article.red_anime header                  { background-color: #365FB7 }
+article.blue_anime section.buildStats,
+article.aborted_anime section.buildStats,
+article.red_anime section.buildStats      { background-color: #203682 }
+article.blue_anime section.details,
+article.aborted_anime section.details,
+article.red_anime section.details         { background-color: #141D5E }
+article.blue_anime section.description,
+article.aborted_anime section.description,
+article.red_anime section.description     { background-color: #0D0D39 }
 
 /* Disabled Builds */
-article.disabled header              { background-color: #59CC0D }
-article.disabled section.buildStats  { background-color: #65A825 }
-article.disabled section.details     { background-color: #638A2C }
-article.disabled section.description { background-color: #516628 }
+article.disabled header              { background-color: #A8A9A8 }
+article.disabled section.buildStats  { background-color: #808180 }
+article.disabled section.details     { background-color: #5E5F5E }
+article.disabled section.description { background-color: #343534 }
