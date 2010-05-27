@@ -4,16 +4,13 @@
 --------------------------------------------------------------------- */
 nav {
   position: absolute;
-  right: -110px;
-  top: 140px;
+  right: 10px;
+  top: 0px;
   background-color: white;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 10px;
-  -webkit-border-radius-topleft: 10px;
-  -webkit-border-radius-topright: 10px;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-radius-bottomleft: 10px;
+  -webkit-border-radius-bottomright: 10px;
   font-family: MuseoSlab, Helvetica, “Helvetica Neue”, Arial, sans-serif;
 }
 
