@@ -149,4 +149,4 @@ $(document).ready(function(){
 // opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000
 // ).animate({ opacity: 0.4 }, 1000 ).animate({ opacity: 1 }, 1000 ) .animate({ opacity: 0.4 }, 1000 ).animate({
 // opacity: 1 }, 1000 );
-//setTimeout('location.reload()', 30000);
+setTimeout('location.reload()', 30000);
