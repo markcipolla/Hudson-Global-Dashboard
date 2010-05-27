@@ -69,14 +69,14 @@ article.build0 header {
 }
 
 article.build0 header h1 {
-  font-size: 3.13em;
+  font-size: 4.13em;
 }
 
 article.build20 header h1,
 article.build40 header h1,
 article.build60 header h1,
 article.build80 header h1 {
-  font-size: 2.13em;
+  font-size: 3.13em;
 }
 
 article.build100 header h1 {
