@@ -1,6 +1,5 @@
 class HudsonDashboard < Padrino::Application
   configure do
-    register LessInitializer
 
     ##
     # Application-specific configuration options

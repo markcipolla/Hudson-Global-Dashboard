@@ -6,8 +6,6 @@ gem 'rack-flash'
 gem 'thin' # or mongrel
 
 # Component requirements
-gem 'less'
-gem 'rack-less'
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3-ruby', :require => "sqlite3"
 
