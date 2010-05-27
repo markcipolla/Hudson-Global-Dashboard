@@ -19,6 +19,11 @@ section, header, footer, aside, nav, article, figure {
 article {
   float: left;
   margin-bottom: 10px;
+  -moz-box-shadow: 3px 3px 8px #333333;
+  -webkit-box-shadow: 3px 3px 8px #333333;
+  -o-box-shadow: 3px 3px 8px #333333;
+  -ms-box-shadow: 3px 3px 8px #333333;
+  box-shadow: 3px 3px 8px #333333;
 }
 
 article.build100 { width: 470px; font-size: 0.6em;} /* Passed, more than the last five builds */
@@ -64,6 +69,10 @@ article header {
   padding: 10px 10px 5px 10px;
 }
 
+article header h1 {
+  text-shadow: 1px 1px 4px #333333;
+}
+
 article.build0 header {
   padding: 20px 10px 10px 10px;
 }
@@ -86,7 +95,7 @@ article.build100 header h1 {
 /* Build Stats
 --------------------------------------------------------------------- */
 article section.buildStats {
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 2px 10px;
 }
 
 article.build0 section.buildStats section {
