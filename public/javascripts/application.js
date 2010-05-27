@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('section#content').masonry({
-    columnWidth: 310,
+    columnWidth: 240,
     resizeable: true,
     animate: true,
     duration: 1000,

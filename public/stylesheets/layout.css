@@ -21,12 +21,12 @@ article {
   margin-bottom: 10px;
 }
 
-article.build100 { width: 300px; font-size: 0.75em;} /* Passed, more than the last five builds */
-article.build80  { width: 610px; font-size: 0.88em;} /* Passed, less than the last five builds */
-article.build60  { width: 610px; font-size: 0.88em;} /* Failed, less than the last five builds */
+article.build100 { width: 230px; font-size: 0.6em;} /* Passed, more than the last five builds */
+article.build80  { width: 470px; font-size: 0.88em;} /* Passed, less than the last five builds */
+article.build60  { width: 470px; font-size: 0.88em;} /* Failed, less than the last five builds */
 article.build40  { width: 610px; font-size: 0.88em;} /* Failed, more than the last five builds */
-article.build20  { width: 610px; font-size: 0.88em;} /* Failed, more than the last five builds */
-article.build0   { width: 920px; } /* Failed, more than the last five builds */
+article.build20  { width: 710px; font-size: 0.88em;} /* Failed, more than the last five builds */
+article.build0   { width: 950px; } /* Failed, more than the last five builds */
 
 /* Typography
 --------------------------------------------------------------------- */
@@ -120,6 +120,7 @@ article.build100 section.buildStats section h2 {
   float: left;
   clear: both;
   width: 80%;
+  font-size: 1.13em;
 }
 
 article.build100 section.buildStats section p {
