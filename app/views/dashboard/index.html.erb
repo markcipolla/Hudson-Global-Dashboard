@@ -31,17 +31,23 @@
         </article>
       <% end %>
     <% end %>
+    <% unless (@tramtracker_to_city.body =~ /<li><span style="float: right; text-align: right; padding-right: 10px;">10:00am<\/span><span>: <\/span><\/li>/) || ( @tramtracker_from_city.body =~ /<li><span style="float: right; text-align: right; padding-right: 10px;">10:00am<\/span><span>: <\/span><\/li>/) %>
     <article class="tramtracker">
       <section class="to_city">
         <h2>To City</h2>
-        <%= @tramtracker_to_city.body %>
+        <% unless @tramtracker_to_city.body =~ /<li><span style="float: right; text-align: right; padding-right: 10px;">10:00am<\/span><span>: <\/span><\/li>/ %>
+          <%= @tramtracker_to_city.body %>
+        <% end %>
       </section>
       <section class="to_city">
         <h2>From City</h2>
-        <%= @tramtracker_from_city.body %>
+        <% unless @tramtracker_from_city.body =~ /<li><span style="float: right; text-align: right; padding-right: 10px;">10:00am<\/span><span>: <\/span><\/li>/ %>
+          <%= @tramtracker_from_city.body %>
+        <% end %>
       </section>
-    </section>
-  </article>
+    </article>
+  <% end %>
+  </section>
   <nav>
     <h1><a href="/admin/" title="Administration">Hudson Global Dashboard Admin</a></h1>
   </nav>

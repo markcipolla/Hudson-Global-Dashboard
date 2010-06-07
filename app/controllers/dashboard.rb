@@ -79,6 +79,7 @@ HudsonDashboard.controllers :dashboard do
     response = http.request(request)
     @tramtracker_from_city = response
     puts @tramtracker_from_city.body
+
     render 'dashboard/index'
   end
 
