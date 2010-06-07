@@ -9,11 +9,18 @@ gem 'thin' # or mongrel
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3-ruby', :require => "sqlite3"
 
+
 # Test requirements
-gem 'rspec', :require => "spec", :group => "test"
-gem 'capybara', :group => "test"
-gem 'cucumber', :group => "test"
-gem 'rack-test', :require => 'rack/test', :group => 'test'
+group :test do
+  # gem "database_cleaner"
+  gem 'rspec', :require => "spec"
+  gem 'capybara' 
+  gem 'cucumber'
+  gem 'rack-test', :require => 'rack/test'
+end
+
+# Gizmo
+gem 'gizmo', "0.0.5"
 
 # Padrino
 gem 'padrino', "0.9.9"

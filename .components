@@ -1,0 +1,7 @@
+--- 
+:test: cucumber
+:orm: activerecord
+:script: jquery
+:mock: none
+:renderer: erb
+:stylesheet: none
