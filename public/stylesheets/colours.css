@@ -9,7 +9,9 @@ article.red header                   { background-color: #E82C0C }
 article.aborted section.buildStats,
 article.red section.buildStats       { background-color: #C81300 }
 article.aborted section.details,
-article.red section.details          { background-color: #9F0000 }
+article.red section.details,
+article.aborted section.committerDetails,
+article.red section.committerDetails  { background-color: #9F0000 }
 article.aborted section.description,
 article.red section.description      { background-color: #750000 }
 
@@ -18,6 +20,7 @@ article.red section.description      { background-color: #750000 }
 article.blue header                  { background-color: #59CC0D }
 article.blue section.buildStats      { background-color: #65A825 }
 article.blue section.details         { background-color: #638A2C }
+article.blue section.committerDetails { background-color: #638A2C }
 article.blue section.description     { background-color: #516628 }
 
 /* Testing Builds */
@@ -29,7 +32,10 @@ article.aborted_anime section.buildStats,
 article.red_anime section.buildStats      { background-color: #203682 }
 article.blue_anime section.details,
 article.aborted_anime section.details,
-article.red_anime section.details         { background-color: #141D5E }
+article.red_anime section.details,
+article.blue_anime section.committerDetails,
+article.aborted_anime section.committerDetails,
+article.red_anime section.committerDetails { background-color: #141D5E }
 article.blue_anime section.description,
 article.aborted_anime section.description,
 article.red_anime section.description     { background-color: #0D0D39 }
@@ -38,4 +44,5 @@ article.red_anime section.description     { background-color: #0D0D39 }
 article.disabled header              { background-color: #A8A9A8 }
 article.disabled section.buildStats  { background-color: #808180 }
 article.disabled section.details     { background-color: #5E5F5E }
+article.disabled section.committerDetails { background-color: #5E5F5E }
 article.disabled section.description { background-color: #343534 }

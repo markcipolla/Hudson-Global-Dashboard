@@ -24,9 +24,9 @@
           <header>
             <h1><a href="<%= job['url'] %>"><%= job['displayName'] %></a></h1>
           </header>
-          <%= partial 'dashboard/committer_details', :locals => {:job => job } %>
           <%= partial 'dashboard/build_stats', :locals => {:job => job } %>
           <%= partial 'dashboard/details', :locals => {:job => job } %>
+          <%= partial 'dashboard/committer_details', :locals => {:job => job } %>
           <%= partial 'dashboard/description', :locals => {:job => job } %>
         </article>
       <% end %>
