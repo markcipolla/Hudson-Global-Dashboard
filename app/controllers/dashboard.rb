@@ -75,7 +75,7 @@ HudsonDashboard.controllers :dashboard do
     # from City
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Post.new(uri.request_uri)
-    request.set_form_data({"ttid" => "1725"})
+    request.set_form_data({"ttid" => "2725"})
     response = http.request(request)
     @tramtracker_from_city = response
     puts @tramtracker_from_city.body
